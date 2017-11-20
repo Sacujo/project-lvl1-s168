@@ -1,7 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 
-const showWelcome = () => {
-	console.log('Welcome to the Brain Games!');
-}
+import brain_games_ig from '..';
 
-showWelcome();
+
+
+
+
+

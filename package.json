@@ -10,8 +10,8 @@
     "prepublishOnly": "npm run build"
   },
   "bin": {
-  "brain-games": "dist/bin/brain-games.js"
-   },
+    "brain-games": "dist/bin/brain-games.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sacujo/project-lvl1-s168.git"
@@ -22,6 +22,7 @@
     "url": "https://github.com/Sacujo/project-lvl1-s168/issues"
   },
   "homepage": "https://github.com/Sacujo/project-lvl1-s168#readme",
+  "dependencies": "readline-sync",
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
