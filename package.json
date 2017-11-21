@@ -24,17 +24,16 @@
   },
   "homepage": "https://github.com/Sacujo/project-lvl1-s168#readme",
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-preset-env": "*",
-    "babel-preset-stage-0": "*",
-    "babel-eslint": "*",
-    "eslint": "*",
-    "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
-    "readline-sync": "^1.4.7",
-    "eslint": "*"
+    "readline-sync": "^1.4.7"
   }
 }
