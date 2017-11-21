@@ -8,7 +8,7 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "eslint": "eslint"
+    "eslint": "eslint",
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -34,6 +34,7 @@
     "eslint-plugin-import": "*"
   },
   "dependencies": {
-    "readline-sync": "^1.4.7"
+    "readline-sync": "^1.4.7",
+    "eslint": "*",
   }
 }
