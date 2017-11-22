@@ -1,5 +1,1 @@
-#!/usr/bin/env node
-import { welcome, askUserName } from '..';
-
-welcome();
-askUserName();
+#! /usr/bin/env node
