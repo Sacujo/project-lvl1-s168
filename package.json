@@ -1,6 +1,6 @@
 {
   "name": "brain-games-ig",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "first project on Hexlet",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
+    "hexlet-pairs": "^1.0.5",
     "random-int": "^1.0.0",
     "readline-sync": "^1.4.7"
   }

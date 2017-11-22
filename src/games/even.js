@@ -1,9 +1,6 @@
 import randomInt from 'random-int';
 import startOfGame from '..';
 
-export const descriptionOfGame = 'Answer "yes" if number even otherwise answer "no" \n';
-
-
 const askQuestion = () => {
   const num = randomInt(100);
   console.log(`Question: ${num}`);
@@ -11,5 +8,6 @@ const askQuestion = () => {
 };
 
 export default () => {
+  const descriptionOfGame = 'Answer "yes" if number even otherwise answer "no" \n';
   startOfGame(askQuestion, descriptionOfGame);
 };
