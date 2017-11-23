@@ -1,6 +1,6 @@
 {
   "name": "brain-games-ig",
-  "version": "1.0.13",
+  "version": "1.0.19",
   "description": "first project on Hexlet",
   "main": "index.js",
   "scripts": {
