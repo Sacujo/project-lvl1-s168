@@ -24,10 +24,14 @@ const failingOfGame = (userAnswer, correctAnswer, userName) => {
   console.log(`Let/s try again, ${userName}`);
 };
 
-export default (askQuestion, descriptionOfGame) => {
+const victory = (userName) => {
+  console.log(`Congratulations, ${userName}!`);
+};
+
+export default (generateQuestionAndAnswer, descriptionOfGame) => {
   const userName = greetings(descriptionOfGame);
   for (let counter = 0; counter < 3; counter += 1) {
-    const pair = askQuestion();
+    const pair = generateQuestionAndAnswer();
     const question = car(pair);
     const correctAnswer = cdr(pair);
     console.log(`Question: ${question}`);
@@ -36,5 +40,5 @@ export default (askQuestion, descriptionOfGame) => {
       console.log('Correct!');
     } else return failingOfGame(userAnswer, correctAnswer, userName);
   }
-  return console.log(`Congratulations, ${userName}!`);
+  return victory(userName);
 };

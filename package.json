@@ -1,6 +1,6 @@
 {
   "name": "brain-games-ig",
-  "version": "1.0.19",
+  "version": "1.0.24",
   "description": "first project on Hexlet",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,12 @@
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bit/brain-calc.js"
+    "brain-gcd": "dist/bit/brain-gcd.js"
   },
+
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sacujo/project-lvl1-s168.git"

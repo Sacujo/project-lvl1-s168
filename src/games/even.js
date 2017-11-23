@@ -2,7 +2,7 @@ import randomInt from 'random-int';
 import { cons } from 'hexlet-pairs';
 import startOfGame from '..';
 
-const askQuestion = () => {
+const generateQuestionAndAnswer = () => {
   const num = randomInt(100);
   const question = `${num}`;
   const correctAnswer = ((num % 2) === 0) ? 'yes' : 'no';
@@ -10,6 +10,6 @@ const askQuestion = () => {
 };
 
 export default () => {
-  const descriptionOfGame = 'Answer "yes" if number even otherwise answer "no" \n';
-  startOfGame(askQuestion, descriptionOfGame);
+  const descriptionOfGame = 'Answer "yes" if number even otherwise answer "no"';
+  startOfGame(generateQuestionAndAnswer, descriptionOfGame);
 };

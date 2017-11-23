@@ -3,7 +3,7 @@ import { cons } from 'hexlet-pairs';
 import startOfGame from '..';
 
 
-const randomOper = () => {
+const generateRandomOper = () => {
   switch (randomInt(3)) {
     case 1:
       return '+';
@@ -15,7 +15,7 @@ const randomOper = () => {
 };
 
 
-const exactOper = (num1, num2, operation) => {
+const generateResult = (num1, num2, operation) => {
   switch (operation) {
     case '+':
       return num1 + num2;
@@ -26,17 +26,17 @@ const exactOper = (num1, num2, operation) => {
   }
 };
 
-const askQuestion = () => {
+const generateQuestionAndAnswer = () => {
   const num1 = randomInt(10);
   const num2 = randomInt(10);
-  const operation = randomOper();
+  const operation = generateRandomOper();
   const question = `${num1} ${operation} ${num2}`;
-  const correctAnswer = String(exactOper(num1, num2, operation));
+  const correctAnswer = String(generateResult(num1, num2, operation));
   return cons(question, correctAnswer);
 };
 
 
 export default () => {
-  const descriptionOfGame = 'What is the result of the expression? \n';
-  startOfGame(askQuestion, descriptionOfGame);
+  const descriptionOfGame = 'What is the result of the expression?';
+  startOfGame(generateQuestionAndAnswer, descriptionOfGame);
 };
