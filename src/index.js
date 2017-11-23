@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 
 const askUserAnswer = () => {
   const userAnswer = readlineSync.question('Your answer: ');
@@ -26,7 +27,10 @@ const failingOfGame = (userAnswer, correctAnswer, userName) => {
 export default (askQuestion, descriptionOfGame) => {
   const userName = greetings(descriptionOfGame);
   for (let counter = 0; counter < 3; counter += 1) {
-    const correctAnswer = askQuestion();
+    const pair = askQuestion();
+    const question = car(pair);
+    const correctAnswer = cdr(pair);
+    console.log(`Question: ${question}`);
     const userAnswer = askUserAnswer();
     if (userAnswer === correctAnswer) {
       console.log('Correct!');

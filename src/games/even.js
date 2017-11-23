@@ -1,10 +1,12 @@
 import randomInt from 'random-int';
+import { cons } from 'hexlet-pairs';
 import startOfGame from '..';
 
 const askQuestion = () => {
   const num = randomInt(100);
-  console.log(`Question: ${num}`);
-  return ((num % 2) === 0) ? 'yes' : 'no';
+  const question = `${num}`;
+  const correctAnswer = ((num % 2) === 0) ? 'yes' : 'no';
+  return cons(question, correctAnswer);
 };
 
 export default () => {

@@ -1,4 +1,5 @@
 import randomInt from 'random-int';
+import { cons } from 'hexlet-pairs';
 import startOfGame from '..';
 
 
@@ -30,8 +31,8 @@ const askQuestion = () => {
   const num2 = randomInt(10);
   const operation = randomOper();
   const question = `${num1} ${operation} ${num2}`;
-  console.log(`Question: ${question}`);
-  return String(exactOper(num1, num2, operation));
+  const correctAnswer = String(exactOper(num1, num2, operation));
+  return cons(question, correctAnswer);
 };
 
 
