@@ -1,6 +1,6 @@
 {
   "name": "brain-games-ig",
-  "version": "1.0.24",
+  "version": "1.0.27",
   "description": "first project on Hexlet",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bit/brain-gcd.js"
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-balance": "dist/bin/brain-balance.js"
   },
-
   "files": [
     "dist"
   ],
