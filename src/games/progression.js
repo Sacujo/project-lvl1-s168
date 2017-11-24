@@ -2,21 +2,28 @@ import randomInt from 'random-int';
 import { cons } from 'hexlet-pairs';
 import startOfGame from '..';
 
-const generateArray = () => {
-  const array = [randomInt(100)];
-  const diss = randomInt(10);
-  for (let i = 1; i < 10; i += 1) {
-    array.push(array[i - 1] + diss);
+const genElemOfProg = (coreElem, diss, n) => {
+  const currentElem = (coreElem + (diss * n));
+  return currentElem;
+};
+
+const genQuestion = (ansIndex, coreElem, diss, n) => {
+  let currentElem = genElemOfProg(coreElem, diss, n);
+  if (n === 10) {
+    return String(genElemOfProg(coreElem, diss, n));
   }
-  return array;
+  if (n === ansIndex) {
+    currentElem = '..';
+  }
+  return `${currentElem} ${genQuestion(ansIndex, coreElem, diss, n + 1)}`;
 };
 
 const generateQuestionAndAnswer = () => {
-  const array = generateArray();
-  const elemNum = randomInt(array.length - 1);
-  const correctAnswer = String(array[elemNum]);
-  array[elemNum] = '..';
-  const question = `${array}`;
+  const coreElem = randomInt(100);
+  const ansIndex = randomInt(1, 10);
+  const diss = randomInt(1, 10);
+  const correctAnswer = String(genElemOfProg(coreElem, diss, ansIndex));
+  const question = genQuestion(ansIndex, coreElem, diss, 1);
   return cons(question, correctAnswer);
 };
 
